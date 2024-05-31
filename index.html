@@ -1,0 +1,39 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа 5</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://d3js.org/d3.v7.min.js"> </script>
+</head>
+<body>
+    <div>
+        <form>
+            <p>Значение по оси OX</p>
+            <input type="radio" name="ox" value="Team" checked>Команда<br>
+            <input type="radio" name="ox" value="Country">Страна<br>
+            <p>Значение по оси OY</p>
+            <input type="checkbox" name="oy" checked>Максимальное K/D<br>
+            <input type="checkbox" name="oy">Минимальный K/D<br>
+            <p>
+                <button type="button" value="Построить" onclick="drawGraph(this.form)">Построить</button>
+            </p>
+            <p>Тип диаграммы</p>
+            <input type="radio" name="chartType" value="scatter" checked> Точечная<br>
+            <input type="radio" name="chartType" value="bar"> Столбчатая<br>
+        </form>
+        <svg height=10> </svg>
+    </div>
+    <div class="table">
+        <p>
+            <input type="button" id="showTable" value="Показать таблицу" >
+        </p>
+        <table>
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+
+    <script src="program.js"></script>
+    <script src="data.js"></script>
+</html>
